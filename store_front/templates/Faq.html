@@ -1,0 +1,370 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block cart_count_bloc %}
+    {{ cart_items }}
+{% endblock %}
+{% block content %}
+	<!-- HEADING-BANNER START -->
+	<div class="heading-banner-area overlay-bg" style="height: 9cm; position: relative;"> <!-- Added position relative -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="heading-banner" style="padding-top: 2cm;"> <!-- Adjusted padding -->
+						<div class="heading-banner-title text-center">
+							<h2 class="text-neon">Join the Future of Stock Predictions</h2>
+						</div>
+						<div class="heading-banner-content text-center mt-4">
+							<p class="text-light">Experience cutting-edge stock market forecasting with our AI-powered LSTM models.</p>
+						</div>
+						<!-- Breadcrumbs positioned at bottom left -->
+						<div class="breadcumbs pb-15 text-left" style="position: absolute; bottom: 10px; left: 200px;"> 
+							<ul class="d-inline-block mb-0" style="list-style: none; padding: 0; margin: 0;">
+								<li style="display: inline;"><a href="/" class="text-neon">Home</a></li>
+								<li style="display: inline; margin: 0 5px;"><span class="text-light">></span></li>
+								<li style="display: inline;" class="text-neon">FAQ</li>
+							</ul>
+						</div>
+						                    <!-- Floating bubbles -->
+                                            <div class="bubble"></div>
+                                            <div class="bubble"></div>
+                                            <div class="bubble"></div>
+                                            <div class="bubble"></div>
+                                            <div class="bubble"></div>
+                                            <div class="bubble"></div>
+                                            <div class="bubble"></div>
+                                            <div class="bubble"></div>
+                                            <div class="bubble"></div>
+                                            <div class="bubble"></div>
+                                            <div class="bubble"></div>
+                                            <div class="bubble"></div>
+                                            <div class="bubble"></div>
+                                            <div class="bubble"></div>
+                                            <div class="bubble"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<!-- HEADING-BANNER END -->
+	<!-- FAQs Start -->
+    <div class="container-fluid offer-section pb-5" id="faq">
+        <div class="container pb-5 overflow-hidden">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h1 class="display-5 mb-4 text-neon">Frequently Asked Questions</h1>
+                <p class="mb-0 text-light">Find answers to the most commonly asked questions about our diabetes detection system, which uses models like SVM, Logistic Regression, Random Forest, and K-Nearest Neighbors (KNN).</p>
+            </div>
+            <div class="row g-5 align-items-center">
+                <!-- Image Section First -->
+                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
+                    <div class="rounded">
+                        <img src="{% static 'store_front/img/gg/diabetes_detection.jpg' %}" class="img-fluid w-100" alt="Diabetes Detection">
+                    </div>
+                </div>
+                <!-- FAQ Section Second -->
+                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.2s">
+                    <div class="accordion accordion-flush" id="accordionFlushSection">
+                        <div class="accordion-item border-0 bg-dark text-light">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                    What is the Diabetes Detection System?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushSection">
+                                <div class="accordion-body">This system uses machine learning models such as SVM, Logistic Regression, Random Forest, and KNN to detect diabetes based on user-provided health data, ensuring accurate and early diagnosis.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 bg-dark text-light">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    How do I use the diabetes detection feature?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushSection">
+                                <div class="accordion-body">Enter your health data (such as age, glucose level, BMI, etc.) into the input fields. The system will analyze this data using the chosen machine learning model to determine the likelihood of diabetes.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 bg-dark text-light">
+                            <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    What models are used in the system?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushSection">
+                                <div class="accordion-body">We use Support Vector Machine (SVM), Logistic Regression, Random Forest, and K-Nearest Neighbors (KNN) models. Each has its unique approach to detecting diabetes with a high degree of accuracy.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 bg-dark text-light">
+                            <h2 class="accordion-header" id="flush-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                    Which model should I choose?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushSection">
+                                <div class="accordion-body">Each model offers different advantages. SVM is highly accurate for complex datasets, Logistic Regression is easy to interpret, Random Forest provides robust predictions, and KNN is simple and effective for smaller datasets. You can experiment with different models to see which works best for your data.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 bg-dark text-light">
+                            <h2 class="accordion-header" id="flush-headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                    How accurate are the predictions?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushSection">
+                                <div class="accordion-body">The accuracy of predictions depends on the quality of the input data and the model used. Generally, all models used in this system provide high accuracy, but they are not a substitute for medical advice and should be used as part of a broader diagnosis process.</div>
+                            </div>
+                        </div>
+                       
+                        <div class="accordion-item border-0 bg-dark text-light">
+                            <h2 class="accordion-header" id="flush-headingSeven">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                                    What should I do if I encounter an issue or have questions?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushSection">
+                                <div class="accordion-body">If you encounter any issues or have additional questions, please refer to our troubleshooting guide or contact us through the support options available in the system.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FAQs End -->
+    
+	
+	<style>
+
+		.container-fluid {
+			background-color: #000000;
+		}
+
+        .text-neon{
+        color: #ffb6c1;
+    }
+
+/* FAQ Section Styling */
+.faq-section {
+    background-color: #121212; /* Dark background to complement baby pink */
+    color: #e0e0e0; /* Light text for contrast */
+    padding: 50px 0;
+    box-shadow: 0 0 40px rgba(255, 182, 193, 0.6); /* Soft pink shadow effect */
+}
+
+/* FAQ Section Titles */
+.faq-section h4 {
+    color: #ffb6c1; /* Baby pink */
+    text-shadow: 0 0 10px rgba(255, 182, 193, 0.9), 0 0 20px rgba(255, 182, 193, 0.7); /* Soft glow for titles */
+}
+
+.faq-section h1 {
+    color: #ffb6c1; /* Baby pink */
+    text-shadow: 0 0 15px rgba(255, 182, 193, 1), 0 0 30px rgba(255, 182, 193, 0.8); /* Intensified glow for main title */
+}
+
+/* Accordion Styling */
+.accordion-flush {
+    background-color: #0d0d0d; /* Dark background */
+    border-radius: 50px;
+    padding: 20px;
+    box-shadow: 0 0 40px rgba(255, 105, 180, 0.9); /* Pink glow for more intensity */
+}
+
+.accordion-button {
+    background-color: #000000; /* Black background for accordion buttons */
+    color: #ffb6c1; /* Baby pink text for readability */
+    border: none;
+    text-shadow: 0 0 10px rgba(255, 182, 193, 0.9), 0 0 20px rgba(255, 182, 193, 0.5); /* Pink glow effect */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.accordion-button:hover {
+    color: #ff69b4; /* Brighter pink on hover */
+    text-shadow: 0 0 10px rgba(255, 105, 180, 0.9), 0 0 20px rgba(255, 105, 180, 0.5); /* Brighter glow effect on hover */
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #ffb6c1; /* Baby pink when active */
+    color: #121212; /* Dark text for better readability */
+    text-shadow: 0 0 15px rgba(255, 182, 193, 1), 0 0 25px rgba(255, 182, 193, 0.8); /* Enhanced glow when active */
+    box-shadow: 0 0 30px rgba(255, 182, 193, 1); /* Brighter glow when active */
+}
+
+.accordion-body {
+    background-color: #1c1c1c; /* Dark background for the content area */
+    color: #ffb6c1; /* Baby pink text for readability */
+    box-shadow: inset 0 0 15px rgba(255, 182, 193, 0.4); /* Inner glow effect */
+}
+
+/* Accordion Items */
+.accordion-item {
+    border: none; /* Remove default border */
+    border-radius: 10px; /* Rounded corners for accordion items */
+    margin-bottom: 15px; /* Space between accordion items */
+    box-shadow: 0 0 20px rgba(255, 182, 193, 0.6); /* Outer glow effect for items */
+}
+
+.accordion-item:last-child {
+    margin-bottom: 0; /* No margin for the last item */
+}
+
+/* Image Styling */
+.faq-section img {
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(255, 182, 193, 0.7); /* Baby pink glow for the image */
+}
+	</style>
+
+<style>
+ .heading-banner-area {
+    background: linear-gradient(135deg, #0d0d0d 30%, #ffb6c1 100%); /* Baby pink gradient */
+    border: 0;
+    box-shadow: 0 0 80px rgba(255, 192, 203, 0.7); /* Stronger glow effect */
+    position: relative;
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Title Glow and Animation */
+.heading-banner-title h2 {
+    font-size: 3rem; /* Larger font size */
+    color: #ff69b4; /* Neon pink */
+    text-shadow: 0 0 15px rgba(255, 105, 180, 0.8), 0 0 30px rgba(255, 105, 180, 0.6); /* Enhanced glow */
+    font-family: 'Orbitron', sans-serif;
+    animation: neonGlow 2s ease-in-out infinite alternate; /* Pulsating neon glow */
+}
+
+/* Pulsating glow animation */
+@keyframes neonGlow {
+    0% {
+        text-shadow: 0 0 15px rgba(255, 105, 180, 0.7), 0 0 30px rgba(255, 105, 180, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 30px rgba(255, 105, 180, 1), 0 0 60px rgba(255, 105, 180, 0.8);
+    }
+}
+
+.heading-banner-content p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    text-shadow: 0 0 5px rgba(255, 192, 203, 0.3);
+}
+
+/* Floating bubbles effect */
+.heading-banner-area:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(255, 192, 203, 0.1) 20%, transparent 80%);
+    z-index: 1;
+}
+
+.heading-banner-area .bubble {
+    position: absolute;
+    background: rgba(255, 182, 193, 0.15); /* Light pink translucent bubbles */
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 182, 193, 0.6);
+    animation: bubbleFloat 10s infinite ease-in-out;
+    z-index: 2;
+}
+
+/* Keyframes for floating bubbles */
+@keyframes bubbleFloat {
+    0% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1);
+        opacity: 0;
+    }
+}
+
+/* Specific bubble sizes and positioning */
+.bubble {
+    animation-duration: 12s; /* Default duration */
+}
+
+.bubble:nth-child(1) {
+    width: 50px;
+    height: 50px;
+    left: 10%;
+}
+
+.bubble:nth-child(2) {
+    width: 70px;
+    height: 70px;
+    left: 25%;
+    animation-duration: 5s;
+}
+
+.bubble:nth-child(3) {
+    width: 40px;
+    height: 40px;
+    left: 45%;
+    animation-duration: 5s;
+}
+
+.bubble:nth-child(4) {
+    width: 80px;
+    height: 80px;
+    left: 65%;
+    animation-duration: 6s;
+}
+
+.bubble:nth-child(5) {
+    width: 30px;
+    height: 30px;
+    left: 85%;
+    animation-duration: 8s;
+}
+
+.bubble:nth-child(6) {
+    width: 60px;
+    height: 60px;
+    left: 15%;
+    animation-duration: 4s;
+}
+
+.bubble:nth-child(7) {
+    width: 55px;
+    height: 55px;
+    left: 35%;
+    animation-duration: 4s;
+}
+
+.bubble:nth-child(8) {
+    width: 65px;
+    height: 65px;
+    left: 50%;
+    animation-duration: 15s;
+}
+
+.bubble:nth-child(9) {
+    width: 45px;
+    height: 45px;
+    left: 75%;
+    animation-duration: 9s;
+}
+
+.bubble:nth-child(10) {
+    width: 75px;
+    height: 75px;
+    left: 80%;
+    animation-duration: 11s;
+}
+
+    
+	</style>
+	
+{% endblock %}

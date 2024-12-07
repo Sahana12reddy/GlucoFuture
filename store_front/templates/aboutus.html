@@ -1,0 +1,297 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block cart_count_bloc %}
+    {{ cart_items }}
+{% endblock %}
+{% block content %}
+    <!-- HEADING-BANNER START -->
+    <div class="heading-banner-area overlay-bg" style="height: 9cm; position: relative;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="heading-banner" style="padding-top: 2cm;">
+                        <div class="heading-banner-title text-center">
+                            <h2 class="text-neon">About Us</h2>
+                        </div>
+                        <div class="heading-banner-content text-center mt-4">
+                            <p class="text-light">Learn about our commitment to transforming diabetes detection through innovative AI solutions.</p>
+                        </div>
+                        <!-- Breadcrumbs positioned at bottom left -->
+                        <div class="breadcumbs pb-15 text-left" style="position: absolute; bottom: 10px; left: 200px;">
+                            <ul class="d-inline-block mb-0" style="list-style: none; padding: 0; margin: 0;">
+                                <li style="display: inline;"><a href="/" class="text-neon">Home</a></li>
+                                <li style="display: inline; margin: 0 5px;"><span class="text-light">></span></li>
+                                <li style="display: inline;" class="text-neon">About Us</li>
+                            </ul>
+                        </div>
+                                            <!-- Floating bubbles -->
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- HEADING-BANNER END -->
+<!-- About Start -->
+<div class="container-fluid about py-5" style="background-color: #0e0d0d;">
+    <div class="container py-5" id="About">
+        <div class="row g-5 align-items-start">
+            <div class="col-xl-12 text-center wow fadeInDown" data-wow-delay="0.4s">
+                <h1 class="display-5 mb-4">Your Comprehensive Diabetes Detection System</h1>
+                <p class="mb-4">Our platform utilizes advanced machine learning algorithms to provide accurate predictions for diabetes diagnosis. With cutting-edge models such as Support Vector Machine (SVM), Logistic Regression, Random Forest, and K-Nearest Neighbors (KNN), we offer a robust solution for early detection and personalized insights.</p>
+            </div>
+        </div>
+        <div class="row g-4 text-center">
+            <div class="col-md-3 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="education-card" style="height: 300px;">
+                    <div class="d-flex flex-column align-items-center justify-content-between" style="height: 100%;">
+                        <i class="fas fa-heartbeat fa-4x"></i>
+                        <h4>Accurate Predictions</h4>
+                        <p>Our SVM and Logistic Regression models deliver high-precision diabetes predictions based on patient data.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 wow fadeInLeft" data-wow-delay="0.6s">
+                <div class="education-card" style="height: 300px;">
+                    <div class="d-flex flex-column align-items-center justify-content-between" style="height: 100%;">
+                        <i class="fa fa-stethoscope fa-4x"></i>
+                        <h4>Multi-Model Analysis</h4>
+                        <p>Compare results from Random Forest and KNN to get a comprehensive view of patient risk factors.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 wow fadeInRight" data-wow-delay="0.8s">
+                <div class="education-card" style="height: 300px;">
+                    <div class="d-flex flex-column align-items-center justify-content-between" style="height: 100%;">
+                        <i class="fa fa-diagnoses fa-4x"></i>
+                        <h4>Early Detection</h4>
+                        <p>Identify potential risks early using our machine learning-driven platform to ensure timely treatment and care.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 wow fadeInUp" data-wow-delay="1s">
+                <div class="education-card" style="height: 300px;">
+                    <div class="d-flex flex-column align-items-center justify-content-between" style="height: 100%;">
+                        <i class="fa fa-tools fa-4x"></i>
+                        <h4>Customizable Analysis</h4>
+                        <p>Adjust detection thresholds and analysis based on individual patient profiles for personalized recommendations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <style>
+    .heading-banner-area {
+    background: linear-gradient(135deg, #0d0d0d 30%, #ffb6c1 100%); /* Baby pink gradient */
+    border: 0;
+    box-shadow: 0 0 80px rgba(255, 192, 203, 0.7); /* Stronger glow effect */
+    position: relative;
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Title Glow and Animation */
+.heading-banner-title h2 {
+    font-size: 3rem; /* Larger font size */
+    color: #ff69b4; /* Neon pink */
+    text-shadow: 0 0 15px rgba(255, 105, 180, 0.8), 0 0 30px rgba(255, 105, 180, 0.6); /* Enhanced glow */
+    font-family: 'Orbitron', sans-serif;
+    animation: neonGlow 2s ease-in-out infinite alternate; /* Pulsating neon glow */
+}
+
+/* Pulsating glow animation */
+@keyframes neonGlow {
+    0% {
+        text-shadow: 0 0 15px rgba(255, 105, 180, 0.7), 0 0 30px rgba(255, 105, 180, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 30px rgba(255, 105, 180, 1), 0 0 60px rgba(255, 105, 180, 0.8);
+    }
+}
+
+.heading-banner-content p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    text-shadow: 0 0 5px rgba(255, 192, 203, 0.3);
+}
+
+/* Floating bubbles effect */
+.heading-banner-area:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(255, 192, 203, 0.1) 20%, transparent 80%);
+    z-index: 1;
+}
+
+.heading-banner-area .bubble {
+    position: absolute;
+    background: rgba(255, 182, 193, 0.15); /* Light pink translucent bubbles */
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 182, 193, 0.6);
+    animation: bubbleFloat 10s infinite ease-in-out;
+    z-index: 2;
+}
+
+/* Keyframes for floating bubbles */
+@keyframes bubbleFloat {
+    0% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1);
+        opacity: 0;
+    }
+}
+
+/* Specific bubble sizes and positioning */
+.bubble {
+    animation-duration: 12s; /* Default duration */
+}
+
+.bubble:nth-child(1) {
+    width: 50px;
+    height: 50px;
+    left: 10%;
+}
+
+.bubble:nth-child(2) {
+    width: 70px;
+    height: 70px;
+    left: 25%;
+    animation-duration: 5s;
+}
+
+.bubble:nth-child(3) {
+    width: 40px;
+    height: 40px;
+    left: 45%;
+    animation-duration: 5s;
+}
+
+.bubble:nth-child(4) {
+    width: 80px;
+    height: 80px;
+    left: 65%;
+    animation-duration: 6s;
+}
+
+.bubble:nth-child(5) {
+    width: 30px;
+    height: 30px;
+    left: 85%;
+    animation-duration: 8s;
+}
+
+.bubble:nth-child(6) {
+    width: 60px;
+    height: 60px;
+    left: 15%;
+    animation-duration: 4s;
+}
+
+.bubble:nth-child(7) {
+    width: 55px;
+    height: 55px;
+    left: 35%;
+    animation-duration: 4s;
+}
+
+.bubble:nth-child(8) {
+    width: 65px;
+    height: 65px;
+    left: 50%;
+    animation-duration: 15s;
+}
+
+.bubble:nth-child(9) {
+    width: 45px;
+    height: 45px;
+    left: 75%;
+    animation-duration: 9s;
+}
+
+.bubble:nth-child(10) {
+    width: 75px;
+    height: 75px;
+    left: 80%;
+    animation-duration: 11s;
+}
+
+    .text-neon{
+        color: #ffb6c1;
+    }
+
+    .education-card {
+    background-color: #1e1e1e;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(245, 149, 220, 0.6); /* Updated color */
+    padding: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(245, 149, 220, 0.9); /* Updated color */
+}
+
+.about i {
+    color: #42e2fe; /* Set primary color for icons */
+    margin-bottom: 15px; /* Space below icons */
+    transition: transform 0.3s ease; /* Adds hover effect animation */
+}
+
+.container-fluid.about {
+        background-color: #121212;
+        color: #e0e0e0;
+        padding: 50px 0;
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    }
+
+
+
+/* Section titles with neon glow */
+.container-fluid h1,
+.container-fluid h4 {
+    color: #ffb6c1; /* Neon cyan */
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7); /* Neon glow */
+}
+
+.container-fluid h5 {
+    color: #00ffff;; /* Neon green for icons */
+}
+
+/* Neon hover effect on headings */
+.container-fluid h5:hover {
+    color: #ffb6c1; /* Neon pink on hover */
+    text-shadow: 0 0 8px rgba(255, 0, 255, 0.8);
+}
+
+    </style>
+{% endblock %}

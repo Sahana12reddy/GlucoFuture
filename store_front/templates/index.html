@@ -1,0 +1,467 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block cart_count_bloc %}
+    {{ cart_items }}
+{% endblock %}
+{% block content %}
+<!-- SLIDER-AREA START  -->
+<!-- Slider Area Start -->
+<div class="video-background">
+    <video autoplay muted loop>
+        <source src="{% static 'store_front/video/hey1.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+<style>
+
+    
+    /* Container with dark background and neon effects */
+.container-fluid.about,
+.container-fluid.offer-section,
+.faq-section {
+    background-color: #000000; /* Dark background */
+    color: #fffbfb; /* Light text for contrast */
+    padding: 50px 0;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4); /* Subtle neon shadow effect */
+}
+
+/* Section titles with neon glow */
+.container-fluid h1,
+.container-fluid h4 {
+    color: #ff80ab; /* Neon cyan */
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7); /* Neon glow */
+}
+
+.container-fluid h5 {
+    color: #00ffff;; /* Neon green for icons */
+}
+
+/* Neon hover effect on headings */
+.container-fluid h5:hover {
+    color: #ffb6c1; /* Neon pink on hover */
+    text-shadow: 0 0 8px rgba(255, 0, 255, 0.8);
+}
+
+/* Neon icons */
+.container-fluid i {
+    color: #00ff00; /* Neon green for icons */
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.8);
+}
+
+/* Neon effect on accordion headers */
+.accordion-button {
+    background-color: #1a1a1a;
+    color: #00ffff; /* Neon cyan for headers */
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.8);
+    border: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #00ffff; /* Neon cyan on active */
+    color: #0d0d0d;
+}
+
+.accordion-body {
+    background-color: #0d0d0d;
+    color: #e0e0e0;
+}
+
+/* Glowing image effect */
+.faq-section img {
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.7); /* Neon pink glow for images */
+    border-radius: 10px;
+}
+
+/* Glow effect on offer cards */
+.offer-section .text-center {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3); /* Neon cyan shadow */
+    padding: 20px;
+    
+}
+
+.offer-section img {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Neon glow for images */
+}
+
+
+/* FAQ Section Styling */
+.faq-section {
+    background-color: #121212; /* Dark background to complement baby pink */
+    color: #e0e0e0; /* Light text for contrast */
+    padding: 50px 0;
+    box-shadow: 0 0 40px rgba(255, 182, 193, 0.6); /* Soft pink shadow effect */
+}
+
+/* FAQ Section Titles */
+.faq-section h4 {
+    color: #ffb6c1; /* Baby pink */
+    text-shadow: 0 0 10px rgba(255, 182, 193, 0.9), 0 0 20px rgba(255, 182, 193, 0.7); /* Soft glow for titles */
+}
+
+.faq-section h1 {
+    color: #ffb6c1; /* Baby pink */
+    text-shadow: 0 0 15px rgba(255, 182, 193, 1), 0 0 30px rgba(255, 182, 193, 0.8); /* Intensified glow for main title */
+}
+
+/* Accordion Styling */
+.accordion-flush {
+    background-color: #0d0d0d; /* Dark background */
+    border-radius: 50px;
+    padding: 20px;
+    box-shadow: 0 0 40px rgba(255, 105, 180, 0.9); /* Pink glow for more intensity */
+}
+
+.accordion-button {
+    background-color: #000000; /* Black background for accordion buttons */
+    color: #ffb6c1; /* Baby pink text for readability */
+    border: none;
+    text-shadow: 0 0 10px rgba(255, 182, 193, 0.9), 0 0 20px rgba(255, 182, 193, 0.5); /* Pink glow effect */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.accordion-button:hover {
+    color: #ff69b4; /* Brighter pink on hover */
+    text-shadow: 0 0 10px rgba(255, 105, 180, 0.9), 0 0 20px rgba(255, 105, 180, 0.5); /* Brighter glow effect on hover */
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #ffb6c1; /* Baby pink when active */
+    color: #121212; /* Dark text for better readability */
+    text-shadow: 0 0 15px rgba(255, 182, 193, 1), 0 0 25px rgba(255, 182, 193, 0.8); /* Enhanced glow when active */
+    box-shadow: 0 0 30px rgba(255, 182, 193, 1); /* Brighter glow when active */
+}
+
+.accordion-body {
+    background-color: #1c1c1c; /* Dark background for the content area */
+    color: #ffb6c1; /* Baby pink text for readability */
+    box-shadow: inset 0 0 15px rgba(255, 182, 193, 0.4); /* Inner glow effect */
+}
+
+/* Accordion Items */
+.accordion-item {
+    border: none; /* Remove default border */
+    border-radius: 10px; /* Rounded corners for accordion items */
+    margin-bottom: 15px; /* Space between accordion items */
+    box-shadow: 0 0 20px rgba(255, 182, 193, 0.6); /* Outer glow effect for items */
+}
+
+.accordion-item:last-child {
+    margin-bottom: 0; /* No margin for the last item */
+}
+
+/* Image Styling */
+.faq-section img {
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(255, 182, 193, 0.7); /* Baby pink glow for the image */
+}
+
+
+
+.video-background {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    max-height: 100vh; /* Or another height value that fits your design */
+}
+
+.video-background video {
+    width: 100%;
+    height: auto;
+    max-height: 100vh; /* Or another height value that fits your design */
+    object-fit: cover; /* Ensure the video covers the container without distortion */
+}
+
+
+.about i {
+    color: #42e2fe; /* Set primary color for icons */
+    margin-bottom: 15px; /* Space below icons */
+    transition: transform 0.3s ease; /* Adds hover effect animation */
+}
+
+
+.education i {
+    color: #42e2fe; /* Set primary color for icons */
+    margin-bottom: 15px; /* Space below icons */
+    transition: transform 0.3s ease; /* Adds hover effect animation */
+}
+
+</style>
+
+<!-- Slider Area End -->
+
+
+<!-- SLIDER-AREA END -->
+<!-- BANNER-AREA START -->
+
+
+<!-- About Start -->
+<div class="container-fluid about py-5" style="background-color: #0e0d0d;">
+    <div class="container py-5" id="About">
+        <div class="row g-5 align-items-start">
+            <div class="col-xl-12 text-center wow fadeInDown" data-wow-delay="0.4s">
+                <h1 class="display-5 mb-4">Your Comprehensive Diabetes Detection System</h1>
+                <p class="mb-4">Our platform utilizes advanced machine learning algorithms to provide accurate predictions for diabetes diagnosis. With cutting-edge models such as Support Vector Machine (SVM), Logistic Regression, Random Forest, and K-Nearest Neighbors (KNN), we offer a robust solution for early detection and personalized insights.</p>
+            </div>
+        </div>
+        <div class="row g-4 text-center">
+            <div class="col-md-3 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="education-card" style="height: 300px;">
+                    <div class="d-flex flex-column align-items-center justify-content-between" style="height: 100%;">
+                        <i class="fas fa-heartbeat fa-4x"></i>
+                        <h4>Accurate Predictions</h4>
+                        <p>Our SVM and Logistic Regression models deliver high-precision diabetes predictions based on patient data.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 wow fadeInLeft" data-wow-delay="0.6s">
+                <div class="education-card" style="height: 300px;">
+                    <div class="d-flex flex-column align-items-center justify-content-between" style="height: 100%;">
+                        <i class="fa fa-stethoscope fa-4x"></i>
+                        <h4>Multi-Model Analysis</h4>
+                        <p>Compare results from Random Forest and KNN to get a comprehensive view of patient risk factors.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 wow fadeInRight" data-wow-delay="0.8s">
+                <div class="education-card" style="height: 300px;">
+                    <div class="d-flex flex-column align-items-center justify-content-between" style="height: 100%;">
+                        <i class="fa fa-diagnoses fa-4x"></i>
+                        <h4>Early Detection</h4>
+                        <p>Identify potential risks early using our machine learning-driven platform to ensure timely treatment and care.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 wow fadeInUp" data-wow-delay="1s">
+                <div class="education-card" style="height: 300px;">
+                    <div class="d-flex flex-column align-items-center justify-content-between" style="height: 100%;">
+                        <i class="fa fa-tools fa-4x"></i>
+                        <h4>Customizable Analysis</h4>
+                        <p>Adjust detection thresholds and analysis based on individual patient profiles for personalized recommendations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+<div class="container-fluid education">
+    <div class="container text-center">
+        <h1 class="display-4 mb-4 wow fadeInDown" data-wow-delay="0.4s">Empower Yourself: Understanding Diabetes</h1>
+        <p class="mb-4 wow fadeInUp" data-wow-delay="0.6s">Knowledge is the first step towards prevention. Learn about diabetes, its effects on the body, long-term complications, and how to manage it effectively.</p>
+        <div class="row g-4">
+            <!-- Long-Term Complications Card -->
+            <div class="col-md-4 wow fadeInLeft" data-wow-delay="0.4s">
+                <div class="education-card" style="height: 300px;">
+                    <div class="d-flex flex-column align-items-center justify-content-between" style="height: 100%;">
+                        <i class="fas fa-stethoscope fa-4x"></i>
+                        <h4>Long-Term Complications</h4>
+                        <p>Uncontrolled diabetes can lead to complications like heart disease, kidney damage, and vision problems. Proper management reduces these risks.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Healthy Lifestyle Management Card -->
+            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="education-card" style="height: 300px;">
+                    <div class="d-flex flex-column align-items-center justify-content-between" style="height: 100%;">
+                        <i class="fas fa-apple-alt fa-4x"></i>
+                        <h4>Healthy Lifestyle Management</h4>
+                        <p>Combining diet, exercise, and medication is key to managing diabetes and leading a healthy, fulfilling life.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Mental Health & Diabetes Card -->
+            <div class="col-md-4 wow fadeInRight" data-wow-delay="0.8s">
+                <div class="education-card" style="height: 300px;">
+                    <div class="d-flex flex-column align-items-center justify-content-between" style="height: 100%;">
+                        <i class="fas fa-brain fa-4x"></i>
+                        <h4>Mental Health & Diabetes</h4>
+                        <p>Living with diabetes can affect mental well-being. Managing stress and seeking support are important aspects of diabetes care.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mt-5">
+            <div class="col-md-6 wow fadeInLeft" data-wow-delay="0.4s">
+                <div class="education-card" style="height: 320px;">
+                    <h5 class="card-title"><i class="fas fa-notes-medical"></i> Symptoms of Diabetes</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item"><i class="fas fa-tint"></i> Increased thirst and frequent urination</li>
+                        <li class="list-group-item"><i class="fas fa-battery-three-quarters"></i> Extreme fatigue and weakness</li>
+                        <li class="list-group-item"><i class="fas fa-eye"></i> Blurred vision</li>
+                        <li class="list-group-item"><i class="fas fa-weight-hanging"></i> Unexplained weight loss</li>
+                        <li class="list-group-item"><i class="fas fa-medkit"></i> Slow-healing sores or frequent infections</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 wow fadeInRight" data-wow-delay="0.6s">
+                <div class="education-card" style="height: 320px;">
+                    <h5 class="card-title"><i class="fas fa-shield-alt"></i> Proactive Steps for Prevention</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item"><i class="fas fa-carrot"></i> Eat a balanced diet rich in vegetables, whole grains, and lean proteins.</li>
+                        <li class="list-group-item"><i class="fas fa-running"></i> Engage in regular physical activity—aim for at least 150 minutes a week.</li>
+                        <li class="list-group-item"><i class="fas fa-heartbeat"></i> Monitor your health regularly, especially if you have risk factors.</li>
+                        <li class="list-group-item"><i class="fas fa-bed"></i> Get adequate sleep, aiming for 7-9 hours per night.</li>
+                        <li class="list-group-item"><i class="fas fa-glass-whiskey"></i> Stay hydrated and maintain a healthy weight.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- FAQs Start -->
+<div class="container-fluid offer-section pb-5" id="faq">
+    <div class="container pb-5 overflow-hidden">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <h1 class="display-5 mb-4 text-neon">Frequently Asked Questions</h1>
+            <p class="mb-0 text-light">Find answers to the most commonly asked questions about our diabetes detection system, which uses models like SVM, Logistic Regression, Random Forest, and K-Nearest Neighbors (KNN).</p>
+        </div>
+        <div class="row g-5 align-items-center">
+            <!-- Image Section First -->
+            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
+                <div class="rounded">
+                    <img src="{% static 'store_front/img/gg/diabetes_detection.jpg' %}" class="img-fluid w-100" alt="Diabetes Detection">
+                </div>
+            </div>
+            <!-- FAQ Section Second -->
+            <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.2s">
+                <div class="accordion accordion-flush" id="accordionFlushSection">
+                    <div class="accordion-item border-0 bg-dark text-light">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                What is the Diabetes Detection System?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushSection">
+                            <div class="accordion-body">This system uses machine learning models such as SVM, Logistic Regression, Random Forest, and KNN to detect diabetes based on user-provided health data, ensuring accurate and early diagnosis.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0 bg-dark text-light">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                How do I use the diabetes detection feature?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushSection">
+                            <div class="accordion-body">Enter your health data (such as age, glucose level, BMI, etc.) into the input fields. The system will analyze this data using the chosen machine learning model to determine the likelihood of diabetes.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0 bg-dark text-light">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                What models are used in the system?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushSection">
+                            <div class="accordion-body">We use Support Vector Machine (SVM), Logistic Regression, Random Forest, and K-Nearest Neighbors (KNN) models. Each has its unique approach to detecting diabetes with a high degree of accuracy.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0 bg-dark text-light">
+                        <h2 class="accordion-header" id="flush-headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                Which model should I choose?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushSection">
+                            <div class="accordion-body">Each model offers different advantages. SVM is highly accurate for complex datasets, Logistic Regression is easy to interpret, Random Forest provides robust predictions, and KNN is simple and effective for smaller datasets. You can experiment with different models to see which works best for your data.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0 bg-dark text-light">
+                        <h2 class="accordion-header" id="flush-headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                How accurate are the predictions?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushSection">
+                            <div class="accordion-body">The accuracy of predictions depends on the quality of the input data and the model used. Generally, all models used in this system provide high accuracy, but they are not a substitute for medical advice and should be used as part of a broader diagnosis process.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0 bg-dark text-light">
+                        <h2 class="accordion-header" id="flush-headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                                What should I do if I encounter an issue or have questions?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushSection">
+                            <div class="accordion-body">If you encounter any issues or have additional questions, please refer to our troubleshooting guide or contact us through the support options available in the system.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FAQs End -->
+
+
+
+
+<style>
+    /* General styling */
+    .container-fluid.education {
+        background-color: #121212;
+        color: #e0e0e0;
+        padding: 50px 0;
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    }
+
+    .education h1 {
+        color: #ff80ab;
+        text-shadow: 0 0 10px rgba(0, 255, 255, 0.7); /* Neon glow */
+    }
+
+    .education-card {
+    background-color: #1e1e1e;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(245, 149, 220, 0.6); /* Updated color */
+    padding: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(245, 149, 220, 0.9); /* Updated color */
+}
+
+
+    .education-icon {
+        font-size: 50px;
+        color: #00bcd4;
+    }
+
+    .education-description {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+
+
+    .list-group {
+        padding: 0;
+        margin: 0;
+    }
+
+    .list-group-item {
+        background-color: #1e1e1e;
+        border: none;
+        color: #e0e0e0;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+{% endblock %}
