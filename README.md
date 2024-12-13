@@ -26,8 +26,7 @@ GlucoFuture is designed to make diabetes risk assessment simple and accessible. 
 ![Login/Registration](https://github.com/yourusername/GlucoFuture/blob/main/screenshots/login_page.jpeg)
 
 ### Dashboard
-![Dashboard](https://github.com/yourusername/GlucoFuture/blob/main/screenshots/dashboard.jpeg)
-
+![Dashboard](https://github.com/Sahana12reddy/GlucoFuture/blob/main/picture/p1.jpeg)
 ### Prediction Page
 ![Prediction](https://github.com/yourusername/GlucoFuture/blob/main/screenshots/prediction_page.jpeg)
 
