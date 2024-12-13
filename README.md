@@ -1,4 +1,4 @@
-
+#GlucoFuture
 ---
 
 # 
@@ -20,15 +20,16 @@ GlucoFuture is designed to make diabetes risk assessment simple and accessible. 
 ## Screenshots
 
 ### Home Page
-![Home](https://github.com/yourusername/GlucoFuture/blob/main/screenshots/home_page.jpeg)
+![Home](https://github.com/Sahana12reddy/GlucoFuture/blob/main/picture/p4.jpeg)
 
 ### Login/Registration Page
-![Login/Registration](https://github.com/yourusername/GlucoFuture/blob/main/screenshots/login_page.jpeg)
+![Login/Registration](https://github.com/Sahana12reddy/GlucoFuture/blob/main/picture/p3.jpeg)
 
 ### Dashboard
 ![Dashboard](https://github.com/Sahana12reddy/GlucoFuture/blob/main/picture/p1.jpeg)
+
 ### Prediction Page
-![Prediction](https://github.com/yourusername/GlucoFuture/blob/main/screenshots/prediction_page.jpeg)
+![Prediction](https://github.com/Sahana12reddy/GlucoFuture/blob/main/picture/p2.jpeg)
 
 ## Setup
 
